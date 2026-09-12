@@ -32,7 +32,11 @@ git log                # 详细版
 ## 第 1 步：在 GitHub 上新建一个空仓库（不要勾选 README）
 ## 第 2 步：关联远程仓库
 ```
-git remote add origin https://github.com/YufeiJiang-gtb/agent.git
+# 1. 生成 SSH key（如果还没有）
+ssh-keygen -t ed25519 -C "你的邮箱"
+# 2. 查看公钥
+cat ~/.ssh/id_ed25519.pub
+git remote set-url origin git@github.com:YufeiJiang-gtb/agent.git
 ```
 ## 第 3 步：推送代码
 ```
